@@ -4,12 +4,7 @@ import { GET_DEPARTMENTS } from '../graphql/queries';
 import NxWelcome from './nx-welcome';
 
 export function App() {
-  const {data} = useQuery(GET_DEPARTMENTS,{
-    variables:{
-      page:1,
-      size:10
-    }
-  });
+  const {data} = useQuery(GET_DEPARTMENTS);
   console.log(data);
   return (
     <>
